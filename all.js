@@ -24,7 +24,7 @@ let data=[
         "name":"南庄度假村露營車二日遊",
         "location":"台中",
         "price":2480,
-        "rate":89.2,
+        "rate":8.9,
         "group":"2",
         "imgUrl":"./assets/images/travel_3.png",
         "content":"南庄雲水豪華露營車，快來擁有最愜意的露營體驗吧！ 一泊一食，輕鬆享受露營車樂趣。 獨立衛浴與私人戶外露臺。 入住豪華露營車還能使用戶外SPA大眾湯，感受美人湯魅力。"
@@ -73,7 +73,7 @@ function init (){
                                     <img src="${item.imgUrl}" alt="travel_1" class="img-hover img-size">
                                 </a>
                                 <p class="text-white fs-5 location-tag">${item.location}</p>
-                                <p class="text-white score-tag">${item.rate}</p>
+                                <p class="text-white text-center score-tag">${item.rate}</p>
                             </div>
                             <div class="card-body border-0 p-6">
                                 <h4 class="pb-2 mb-6 fw-bold border-b"><a href="">${item.name}</a></h4>
@@ -111,7 +111,7 @@ filter.addEventListener("change",function(e){
                                     <img src="${item.imgUrl}" alt="travel_1" class="img-hover img-size">
                                 </a>
                                 <p class="text-white fs-5 location-tag">${item.location}</p>
-                                <p class="text-white score-tag">${item.rate}</p>
+                                <p class="text-white text-center score-tag">${item.rate}</p>
                             </div>
                             <div class="card-body border-0 p-6">
                                 <h4 class="pb-2 mb-6 fw-bold border-b"><a href="">${item.name}</a></h4>
@@ -137,7 +137,7 @@ filter.addEventListener("change",function(e){
                                     <img src="${item.imgUrl}" alt="travel_1" class="img-hover img-size">
                                 </a>
                                 <p class="text-white fs-5 location-tag">${item.location}</p>
-                                <p class="text-white score-tag">${item.rate}</p>
+                                <p class="text-white text-center score-tag">${item.rate}</p>
                             </div>
                             <div class="card-body border-0 p-6">
                                 <h4 class="pb-2 mb-6 fw-bold border-b"><a href="">${item.name}</a></h4>
@@ -192,10 +192,10 @@ newSet.addEventListener("click",function(e){
     // reset
     function resetValue(){
         const addTicketForm =document.querySelector(".addTicketForm");
-        console.log(addTicketForm);
         addTicketForm.reset();
     };
     resetValue();
-    init(); 
+    init();
+    filter.value="全部地區";
     searchResult.innerHTML=`本次搜尋共 ${data.length} 筆資料`
 });
